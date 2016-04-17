@@ -4,6 +4,7 @@ require 'csv'
 
 class Udacidata
   # Your code goes here!
+  create_finder_methods
   @@data_path = File.dirname(__FILE__) + "/../data/data.csv"
    
   def self.create(attributes = nil)
@@ -53,23 +54,23 @@ class Udacidata
     end
   end
 
-  def self.find_by_brand(brand)
-    products = all
-    products.each do |product|
-      if(product.brand == brand)
-        return product
-      end
-    end
-  end
+  #def self.find_by_brand(brand)
+  #  products = all
+   # products.each do |product|
+    #  if(product.brand == brand)
+     #   return product
+      #end
+   # end
+  #end
 
-  def self.find_by_name(name)
-    products = all
-    products.each do |product|
-      if(product.name == name)
-        return product
-      end
-    end
-  end
+  #def self.find_by_name(name)
+    #products = all
+    #products.each do |product|
+      #if(product.name == name)
+      #  return product
+      #end
+    #end
+  #end
 
   def self.where(attributes = {})
     products = all
@@ -147,7 +148,11 @@ class Udacidata
     deletedProduct
   end
 
-  def self.update
+  def self.method_missing(method_name, arguments)
+    if(method_name.to_s.start_with?("find_by"))
+      create_finder_methods("name", "brand")
+      self.public_send(method_name, arguments)
+    end
   end
 
   

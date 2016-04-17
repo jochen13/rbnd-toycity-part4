@@ -7,12 +7,9 @@ require_relative 'schema'
 
 def db_seed
   data_path = File.dirname(__FILE__) + "/data.csv"
-  CSV.open(data_path, "a+b") do |csv|
-    10.times do |r|
-      brand = Faker::Company.name
-      product = Faker::Commerce.product_name
-      price = Faker::Commerce.price
-      csv << [r+1, brand, product, price]
+  CSV.open(data_path, "a+") do |csv|
+    10.times do |index|
+      csv << [index+1, Faker::Company.name, Faker::Commerce.product_name, Faker::Commerce.price]
     end
   end
   
