@@ -36,7 +36,7 @@ print Product.all
 #puts "------------------------------------------------------------"
 #puts "TEST ERROR HANDLING FOR FIND - COMMENT OUT BEFORE SUBMITTING"
 #puts "------------------------------------------------------------"
-print Product.find(1000000000000)
+#print Product.find(1000000000000)
 #
 #puts
 puts "--------------------"

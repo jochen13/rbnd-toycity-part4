@@ -45,6 +45,7 @@ class Udacidata
     products = all
     if(index > products.length)
       raise ProductNotFoundErrors, "'#{index}' out of range."
+    end
     products.each do |product|
       if(product.id == index)
         return product
@@ -119,6 +120,9 @@ class Udacidata
   def self.destroy(index)
     #read dbs and remove element
     cvsData = all
+    if(index > cvsData.length)
+      raise ProductNotFoundErrors, "'#{index}' out of range."
+    end
     deletedProduct = nil
     i = 0
     cvsData.each do |data|
