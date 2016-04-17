@@ -1,5 +1,7 @@
 module Analyzable
   # Your code goes here!
+
+  #calculates average price of array of products
   def average_price(products)
     averagePrice = 0.0
     products.each do |product|
@@ -8,6 +10,7 @@ module Analyzable
     averagePrice = (averagePrice/products.length).round(2)
   end
 
+  #prints the report for an array of products
   def print_report(product)
     report = ""
     product.each do |product|
@@ -16,6 +19,7 @@ module Analyzable
     report
   end
 
+  # counts all products of a specific brand
   def count_by_brand(products)
     brandCount = {}
     products.each do |product|
@@ -28,6 +32,7 @@ module Analyzable
     brandCount
   end
 
+  #counts all products of a specific name
   def count_by_name(products)
     nameCount = {}
     products.each do |product|

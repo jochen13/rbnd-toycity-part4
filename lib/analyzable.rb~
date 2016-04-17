@@ -31,7 +31,7 @@ module Analyzable
   def count_by_name(products)
     nameCount = {}
     products.each do |product|
-      if(brandCount.has_key?(product.name))
+      if(nameCount.has_key?(product.name))
         nameCount[product.name] += 1
       else
         nameCount[product.name] = 1
