@@ -1,0 +1,71 @@
+commit a034c0b7b3c6576c0a147174ced796ebbebaf13c
+Author: jochen13 <jochenschmitt@gmail.com>
+Date:   Sun Apr 17 11:58:37 2016 -0700
+
+    Added comments and final fixes
+
+commit 5fa045d799580375525bb1a13bfe94a192e81864
+Author: jochen13 <jochenschmitt@gmail.com>
+Date:   Sun Apr 17 11:49:06 2016 -0700
+
+    Added find_by meta methods
+
+commit 17d359a4f4aee997b92ff31d640158f81a974ff0
+Author: jochen13 <jochenschmitt@gmail.com>
+Date:   Sun Apr 17 10:28:56 2016 -0700
+
+    Added Error Message handling
+
+commit a5cb308bdc9f2a51704d70508371a72afb83eb70
+Author: jochen13 <jochenschmitt@gmail.com>
+Date:   Sun Apr 17 10:16:45 2016 -0700
+
+    All Tests passing
+
+commit fb09be870d43afc52fa944bb2885de199d8c6004
+Author: Jerome Chenette <jerome.chenette@gmail.com>
+Date:   Thu Apr 7 12:00:07 2016 -0700
+
+    New Rubric linked
+
+commit 10342e938615a1a6bec2300f011fa196a3c7cbe8
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Fri Mar 4 12:29:39 2016 -0800
+
+    Switch assert_equal before and after
+
+commit 47cb329b764f11930077dff48ed87552c0a4447e
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Mon Feb 29 15:16:29 2016 -0800
+
+    Add test for all method checking persistence of data
+
+commit 635a497673097bc5bc80356794f73d032b3e66da
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Mon Feb 22 11:23:59 2016 -0800
+
+    Remove superfluous code
+
+commit dabb3440e34d0e47c42ff2c1a44dab87030c5ab5
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Mon Feb 22 11:22:59 2016 -0800
+
+    Add test to check if Update method updates the database
+
+commit 97f252007ebc68c6fa66d2021e76c36e7dca433d
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Mon Feb 22 10:38:41 2016 -0800
+
+    Fix headings to match code
+
+commit b0b353d1852150453106c9918446bd25ccdde1ad
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Thu Feb 18 10:58:04 2016 -0800
+
+    Change order of app.rb output
+
+commit da798807e50b6b1f36064f584bb04219f7bed801
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Wed Feb 17 16:33:30 2016 -0800
+
+    Initial commit

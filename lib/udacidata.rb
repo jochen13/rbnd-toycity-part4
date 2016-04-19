@@ -58,14 +58,13 @@ class Udacidata
   #find item by index
   def self.find(index)
     products = all
-    if(index > products.length)
-      raise ProductNotFoundErrors, "'#{index}' out of range."
-    end
+
     products.each do |product|
       if(product.id == index)
         return product
       end
     end
+    raise ProductNotFoundErrors, "'#{index}' out of range."
   end
 
   #find items by attribute
@@ -91,8 +90,19 @@ class Udacidata
 
   #update an item
   def update(attributes = {})
-    @brand = attributes[:brand]
-    @price = attributes[:price]
+    #check which keys are upate
+    if(attributes.has_key?(:brand))
+      @brand = attributes[:brand]
+    end
+    
+    if(attributes.has_key?(:price))
+      @price = attributes[:price]
+    end
+    
+    if(attributes.has_key?(:name))
+      @name = attributes[:name]
+    end
+
     cvsData = CSV.read(@@data_path)
     cvsData.delete_at(0)
     cvsData.each do |data|
@@ -119,15 +129,12 @@ class Udacidata
   #remove an item
   def self.destroy(index)
     #read dbs and remove element
+    deletedProduct = find(index)
     cvsData = all
-    if(index > cvsData.length)
-      raise ProductNotFoundErrors, "'#{index}' out of range."
-    end
-    deletedProduct = nil
+    
     i = 0
     cvsData.each do |data|
-      if(data.id == index)
-        deletedProduct = data
+      if(data.id == deletedProduct.id)
         cvsData.delete_at(i)
       end
       i += 1
